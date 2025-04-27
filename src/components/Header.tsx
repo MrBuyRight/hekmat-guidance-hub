@@ -29,12 +29,15 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex flex-col">
           <a href="/" className="flex items-center">
             <span className="text-2xl font-bold text-hekmat-800 font-serif">
               hekmat<span className="text-wisdom-600">.help</span>
             </span>
           </a>
+          <span className="text-sm text-wisdom-600 italic mt-1">
+            Persian: حکمت - wisdom, guidance, and profound knowledge
+          </span>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">

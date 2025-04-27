@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarClock } from "lucide-react";
@@ -32,14 +31,10 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6" ref={elementsRef}>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-gray-900 leading-tight reveal">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight reveal">
               Get Guidance for Life's{" "}
               <span className="text-wisdom-600">Important Decisions</span>
             </h1>
-            
-            <div className="mb-6 text-wisdom-600 text-lg italic reveal">
-              hekmat (Persian: حکمت) - wisdom, guidance, and profound knowledge
-            </div>
             
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed reveal">Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.</p>
             
