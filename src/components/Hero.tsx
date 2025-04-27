@@ -50,7 +50,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -left-4 -top-4 w-24 h-24 bg-wisdom-200 rounded-full opacity-70 z-0"></div>
               <div className="absolute -right-6 -bottom-6 w-32 h-32 bg-hekmat-200 rounded-full opacity-70 z-0"></div>
-              <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=1200" alt="Mountain summit representing guidance and clarity" className="rounded-lg shadow-xl z-10 relative" />
+              <img src="https://images.unsplash.com/photo-1523712999604-f77fbcfc3843?auto=format&fit=crop&q=80&w=1200" alt="Sunlight breaking through a forest canopy representing guidance and clarity" className="rounded-lg shadow-xl z-10 relative" />
             </div>
           </div>
         </div>
