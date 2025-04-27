@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/BookingForm";
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -17,19 +16,15 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white bg-opacity-95 shadow-md py-3" : "bg-transparent py-5"
-    }`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white bg-opacity-95 shadow-md py-3" : "bg-transparent py-5"}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-col">
           <a href="/" className="flex items-center">
-            <span className="text-xl md:text-2xl font-bold text-hekmat-800 font-serif tracking-wide">
-              hekmat<span className="text-wisdom-600 font-serif">.help</span>
+            <span className="text-xl md:text-2xl font-bold font-serif tracking-wide text-white">
+              hekmat<span className="font-serif text-white">.help</span>
             </span>
           </a>
-          <span className="text-[10px] md:text-xs text-wisdom-600 font-serif italic mt-1 tracking-wider">
+          <span className="text-[10px] md:text-xs font-serif italic mt-1 tracking-wider text-zinc-50">
             Persian: حکمت - wisdom and guidance
           </span>
         </div>
@@ -50,8 +45,6 @@ const Header = () => {
           <BookingForm />
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
