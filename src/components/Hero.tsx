@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarClock } from "lucide-react";
+
 const Hero = () => {
   const observerRef = useRef<null | IntersectionObserver>(null);
   const elementsRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     observerRef.current = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -24,21 +26,25 @@ const Hero = () => {
       }
     };
   }, []);
+
   return <section className="pt-28 pb-20 md:pb-32 md:pt-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 md:px-6" ref={elementsRef}>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
+            <div className="mb-4 text-wisdom-600 text-lg italic reveal">
+              hekmat (Persian: حکمت) - wisdom, guidance, and profound knowledge
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight reveal">
-              Get Free Guidance for Life's{" "}
+              Get Guidance for Life's{" "}
               <span className="text-wisdom-600">Important Decisions</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed reveal">Book a free 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.</p>
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed reveal">Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.</p>
             
             <div className="flex flex-col sm:flex-row gap-4 reveal">
               <Button className="bg-wisdom-600 hover:bg-wisdom-700 text-white px-8 py-6 text-lg" onClick={() => window.location.href = '#how-it-works'}>
                 <CalendarClock className="w-5 h-5 mr-2" />
-                Book Your Free Call
+                Book Your Call
               </Button>
             </div>
           </div>
@@ -54,4 +60,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
