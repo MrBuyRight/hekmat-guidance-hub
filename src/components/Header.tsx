@@ -29,7 +29,7 @@ const Header = () => {
               hekmat<span className="text-wisdom-600 font-serif">.help</span>
             </span>
           </a>
-          <span className="text-sm md:text-base text-wisdom-600 font-serif italic mt-1 tracking-wider">
+          <span className="text-xs md:text-sm text-wisdom-600 font-serif italic mt-1 tracking-wider">
             Persian: حکمت - wisdom and guidance
           </span>
         </div>
