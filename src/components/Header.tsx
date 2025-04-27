@@ -36,7 +36,7 @@ const Header = () => {
             </span>
           </a>
           <span className="text-sm text-wisdom-600 italic mt-1">
-            Persian: حکمت - wisdom, guidance, and profound knowledge
+            Persian: حکمت - wisdom and guidance
           </span>
         </div>
 
