@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { CalendarClock } from "lucide-react";
 
 const Hero = () => {
   const observerRef = useRef<null | IntersectionObserver>(null);
@@ -36,44 +37,22 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight reveal">
-              Personalized Guidance for Life's{" "}
+              Get Free Guidance for Life's{" "}
               <span className="text-wisdom-600">Important Decisions</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed reveal">
-              Navigate challenges and find clarity through 1:1 advice sessions with experienced guides. No matter what you're facing, we're here to help.
+              Book a free 30-minute voice call with an experienced guide. No matter what you're facing, we're here to help.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 reveal">
-              <Button className="bg-hekmat-600 hover:bg-hekmat-700 text-white px-8 py-6 text-lg">
-                Book Your Session
+              <Button 
+                className="bg-wisdom-600 hover:bg-wisdom-700 text-white px-8 py-6 text-lg"
+                onClick={() => window.location.href = '#how-it-works'}
+              >
+                <CalendarClock className="w-5 h-5 mr-2" />
+                Book Your Free Call
               </Button>
-              <Button variant="outline" className="border-hekmat-600 text-hekmat-600 hover:bg-hekmat-50 px-8 py-6 text-lg">
-                Learn How It Works
-              </Button>
-            </div>
-            
-            <div className="mt-8 flex items-center gap-2 reveal">
-              <div className="flex -space-x-2">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
-                  className="w-10 h-10 rounded-full border-2 border-white"
-                  alt="User"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100"
-                  className="w-10 h-10 rounded-full border-2 border-white"
-                  alt="User"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100"
-                  className="w-10 h-10 rounded-full border-2 border-white"
-                  alt="User"
-                />
-              </div>
-              <p className="text-sm text-gray-600">
-                <span className="font-medium">200+</span> helped this month
-              </p>
             </div>
           </div>
           
