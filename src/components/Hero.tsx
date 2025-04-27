@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 import { BookingForm } from "@/components/BookingForm";
 
@@ -26,36 +27,40 @@ const Hero = () => {
     };
   }, []);
 
-  return <section className="pt-28 pb-20 md:pb-32 md:pt-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 md:px-6" ref={elementsRef}>
+  return (
+    <section className="relative pt-28 pb-20 md:pb-32 md:pt-32 min-h-[90vh] flex items-center">
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1469474968028-56623f02e42e')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10" ref={elementsRef}>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight reveal">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight reveal">
               Get Guidance for Life's{" "}
-              <span className="text-wisdom-600">Important Decisions</span>
+              <span className="text-wisdom-200">Important Decisions</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed reveal">Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.</p>
+            <p className="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed reveal">
+              Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 reveal">
               <BookingForm />
             </div>
           </div>
-          
-          <div className="w-full md:w-1/2 reveal">
-            <div className="relative">
-              <div className="absolute -left-4 -top-4 w-24 h-24 bg-wisdom-200 rounded-full opacity-70 z-0"></div>
-              <div className="absolute -right-6 -bottom-6 w-32 h-32 bg-hekmat-200 rounded-full opacity-70 z-0"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000&h=800" 
-                alt="Serene mountain landscape at sunrise representing wisdom and guidance" 
-                className="rounded-lg shadow-xl z-10 relative w-full object-cover" 
-              />
-            </div>
-          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default Hero;
