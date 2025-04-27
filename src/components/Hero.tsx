@@ -38,18 +38,18 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10" ref={elementsRef}>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight reveal">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight reveal drop-shadow-lg">
               Get Guidance for Life's{" "}
-              <span className="text-wisdom-200">Important Decisions</span>
+              <span className="text-wisdom-100">Important Decisions</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed reveal">
+            <p className="text-lg md:text-xl text-gray-50 mb-8 leading-relaxed reveal drop-shadow">
               Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.
             </p>
             
