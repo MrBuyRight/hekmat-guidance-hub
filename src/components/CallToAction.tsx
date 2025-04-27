@@ -1,7 +1,5 @@
-
 import React, { useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { CalendarClock } from "lucide-react";
+import { BookingForm } from "@/components/BookingForm";
 
 const CallToAction = () => {
   const observerRef = useRef<null | IntersectionObserver>(null);
@@ -42,10 +40,7 @@ const CallToAction = () => {
             Book your free 30-minute guidance call and start your journey towards clarity.
           </p>
           <div className="flex justify-center reveal">
-            <Button className="bg-wisdom-600 hover:bg-wisdom-700 text-white px-8 py-6 text-lg">
-              <CalendarClock className="w-5 h-5 mr-2" />
-              Book Your Free Call
-            </Button>
+            <BookingForm />
           </div>
           <p className="mt-6 text-sm text-hekmat-300 reveal">
             No commitment required. Cancel or reschedule anytime.

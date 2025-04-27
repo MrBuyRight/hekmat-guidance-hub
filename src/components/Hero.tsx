@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarClock } from "lucide-react";
+import { BookingForm } from "@/components/BookingForm";
 
 const Hero = () => {
   const observerRef = useRef<null | IntersectionObserver>(null);
@@ -39,10 +40,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed reveal">Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.</p>
             
             <div className="flex flex-col sm:flex-row gap-4 reveal">
-              <Button className="bg-wisdom-600 hover:bg-wisdom-700 text-white px-8 py-6 text-lg" onClick={() => window.location.href = '#how-it-works'}>
-                <CalendarClock className="w-5 h-5 mr-2" />
-                Book Your Call
-              </Button>
+              <BookingForm />
             </div>
           </div>
           
