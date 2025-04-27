@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/BookingForm";
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -30,13 +31,13 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#services" className="text-sm font-medium text-gray-700 hover:text-hekmat-600 transition-colors">
+          <a href="#services" className="text-sm font-medium text-gray-50 hover:text-wisdom-200 transition-colors">
             Services
           </a>
-          <a href="#areas" className="text-sm font-medium text-gray-700 hover:text-hekmat-600 transition-colors">
+          <a href="#areas" className="text-sm font-medium text-gray-50 hover:text-wisdom-200 transition-colors">
             Areas of Expertise
           </a>
-          <a href="#how-it-works" className="text-sm font-medium text-gray-700 hover:text-hekmat-600 transition-colors">
+          <a href="#how-it-works" className="text-sm font-medium text-gray-50 hover:text-wisdom-200 transition-colors">
             How It Works
           </a>
         </nav>
