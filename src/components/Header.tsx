@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/BookingForm";
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -16,15 +17,19 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white bg-opacity-95 shadow-md py-3" : "bg-transparent py-5"}`}>
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? "bg-white bg-opacity-95 shadow-md py-3" : "bg-transparent py-5"
+    }`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-col">
           <a href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-hekmat-800 font-serif">
-              hekmat<span className="text-wisdom-600">.help</span>
+            <span className="text-2xl md:text-3xl font-bold text-hekmat-800 font-serif tracking-wide">
+              hekmat<span className="text-wisdom-600 font-serif">.help</span>
             </span>
           </a>
-          <span className="text-sm text-wisdom-600 italic mt-1">
+          <span className="text-sm md:text-base text-wisdom-600 font-serif italic mt-1 tracking-wider">
             Persian: حکمت - wisdom and guidance
           </span>
         </div>
@@ -39,13 +44,14 @@ const Header = () => {
           <a href="#how-it-works" className="text-sm font-medium text-gray-700 hover:text-hekmat-600 transition-colors">
             How It Works
           </a>
-          
         </nav>
 
         <div>
           <BookingForm />
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;
