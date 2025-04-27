@@ -25,11 +25,11 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-col">
           <a href="/" className="flex items-center">
-            <span className="text-2xl md:text-3xl font-bold text-hekmat-800 font-serif tracking-wide">
+            <span className="text-xl md:text-2xl font-bold text-hekmat-800 font-serif tracking-wide">
               hekmat<span className="text-wisdom-600 font-serif">.help</span>
             </span>
           </a>
-          <span className="text-xs md:text-sm text-wisdom-600 font-serif italic mt-1 tracking-wider">
+          <span className="text-[10px] md:text-xs text-wisdom-600 font-serif italic mt-1 tracking-wider">
             Persian: حکمت - wisdom and guidance
           </span>
         </div>
