@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarClock } from "lucide-react";
@@ -31,13 +32,14 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6" ref={elementsRef}>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
-            <div className="mb-4 text-wisdom-600 text-lg italic reveal">
-              hekmat (Persian: حکمت) - wisdom, guidance, and profound knowledge
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight reveal">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-gray-900 leading-tight reveal">
               Get Guidance for Life's{" "}
               <span className="text-wisdom-600">Important Decisions</span>
             </h1>
+            
+            <div className="mb-6 text-wisdom-600 text-lg italic reveal">
+              hekmat (Persian: حکمت) - wisdom, guidance, and profound knowledge
+            </div>
             
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed reveal">Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.</p>
             
@@ -53,7 +55,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -left-4 -top-4 w-24 h-24 bg-wisdom-200 rounded-full opacity-70 z-0"></div>
               <div className="absolute -right-6 -bottom-6 w-32 h-32 bg-hekmat-200 rounded-full opacity-70 z-0"></div>
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" alt="Person getting guidance" className="rounded-lg shadow-xl z-10 relative" />
+              <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=1200" alt="Mountain summit representing guidance and clarity" className="rounded-lg shadow-xl z-10 relative" />
             </div>
           </div>
         </div>
