@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { BookingForm } from "@/components/BookingForm";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,9 +68,7 @@ const Header = () => {
         </nav>
 
         <div>
-          <Button className="bg-wisdom-600 hover:bg-wisdom-700 text-white">
-            Book a Call
-          </Button>
+          <BookingForm />
         </div>
       </div>
     </header>

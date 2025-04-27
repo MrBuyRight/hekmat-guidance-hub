@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { CalendarClock } from "lucide-react";
 import { BookingForm } from "@/components/BookingForm";
 
 const Hero = () => {
@@ -48,7 +46,11 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -left-4 -top-4 w-24 h-24 bg-wisdom-200 rounded-full opacity-70 z-0"></div>
               <div className="absolute -right-6 -bottom-6 w-32 h-32 bg-hekmat-200 rounded-full opacity-70 z-0"></div>
-              <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=1200" alt="Sun rays breaking through trees representing guidance and enlightenment" className="rounded-lg shadow-xl z-10 relative" />
+              <img 
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000&h=800" 
+                alt="Serene mountain landscape at sunrise representing wisdom and guidance" 
+                className="rounded-lg shadow-xl z-10 relative w-full object-cover" 
+              />
             </div>
           </div>
         </div>

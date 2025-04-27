@@ -73,20 +73,24 @@ export function BookingForm() {
           Book Your Call
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] p-6 bg-white rounded-lg shadow-xl border-0">
         <DialogHeader>
-          <DialogTitle>Schedule Your Guidance Call</DialogTitle>
+          <DialogTitle className="text-2xl font-serif text-gray-900 mb-4">Schedule Your Guidance Call</DialogTitle>
         </DialogHeader>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel className="text-gray-700">Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your name" {...field} />
+                    <Input 
+                      placeholder="Enter your name" 
+                      {...field} 
+                      className="py-6 px-4 border-gray-200 focus:border-wisdom-500 focus:ring-wisdom-500"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -97,15 +101,23 @@ export function BookingForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel className="text-gray-700">Phone Number</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your phone number" type="tel" {...field} />
+                    <Input 
+                      placeholder="Enter your phone number" 
+                      type="tel" 
+                      {...field}
+                      className="py-6 px-4 border-gray-200 focus:border-wisdom-500 focus:ring-wisdom-500"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-wisdom-600 hover:bg-wisdom-700">
+            <Button 
+              type="submit" 
+              className="w-full bg-wisdom-600 hover:bg-wisdom-700 text-white py-6 text-lg font-medium transition-colors"
+            >
               Submit Request
             </Button>
           </form>
