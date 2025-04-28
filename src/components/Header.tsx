@@ -49,7 +49,7 @@ const Header = () => {
           <div className="flex flex-col items-center">
             <a href="/" className="flex items-center">
               <span
-                className={`text-xl md:text-4xl font-bold tracking-wide font-['Tilt_Prism'] ${
+                className={`text-4xl font-bold tracking-wide font-['Tilt_Prism'] ${
                   isScrolled ? "text-gray-900" : "text-white"
                 }`}
               >
