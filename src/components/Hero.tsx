@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { BookingForm } from "@/components/BookingForm";
+
 const Hero = () => {
   const observerRef = useRef<null | IntersectionObserver>(null);
   const elementsRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     observerRef.current = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -13,23 +15,30 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+
     const elements = elementsRef.current?.querySelectorAll('.reveal');
     elements?.forEach(el => {
       observerRef.current?.observe(el);
     });
+
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
     };
   }, []);
-  return <section className="relative pt-24 md:pt-28 pb-20 md:pb-32 min-h-[90vh] flex items-center">
-      <div className="absolute inset-0 z-0" style={{
-      backgroundImage: "url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000&h=800')",
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
-    }}>
+
+  return (
+    <section className="relative pt-24 md:pt-28 pb-20 md:pb-32 min-h-[90vh] flex items-center">
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000&h=800')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="absolute inset-0 bg-black/60" />
       </div>
       
@@ -46,11 +55,16 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 reveal">
-              <BookingForm buttonText="Book a Call" className="w-full sm:w-auto text-white bg-wisdom-700 hover:bg-wisdom-600" />
+              <BookingForm 
+                buttonText="Book a Call" 
+                className="w-full sm:w-auto text-white bg-wisdom-700 hover:bg-wisdom-600" 
+              />
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
