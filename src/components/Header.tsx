@@ -60,12 +60,11 @@ const Header = () => {
                 isScrolled ? "text-gray-600" : "text-zinc-50"
               }`}
             >
-              - guidance & understanding
+              -guidance consultancy
             </span>
           </div>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <a
@@ -82,12 +81,10 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <div className="hidden md:block">
           <BookingForm buttonText="Get Help" />
         </div>
 
-        {/* Mobile Navigation & CTA */}
         <div className="md:hidden flex items-center space-x-2">
           <BookingForm
             buttonText="Get Help"
@@ -116,7 +113,7 @@ const Header = () => {
                       hekmat
                     </span>
                     <span className="text-xs font-serif italic mt-0.5 tracking-wider text-center text-gray-600">
-                      - guidance & understanding
+                      -guidance consultancy
                     </span>
                   </div>
                 </div>
