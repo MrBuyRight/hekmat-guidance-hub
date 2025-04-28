@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { BookingForm } from "@/components/BookingForm";
 import MobileMenu from "./MobileMenu";
@@ -69,8 +70,12 @@ const Header = () => {
           </a>
         </nav>
 
-        <div>
-          <BookingForm />
+        <div className="hidden md:block">
+          <BookingForm buttonText="Get Help" />
+        </div>
+        
+        <div className="md:hidden">
+          <BookingForm buttonText="Get Help" variant="outline" size="sm" className="!px-3" />
         </div>
       </div>
     </header>

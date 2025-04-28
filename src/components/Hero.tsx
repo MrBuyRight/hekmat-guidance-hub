@@ -54,7 +54,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 reveal">
-              <BookingForm />
+              <BookingForm buttonText="Get Help" className="w-full sm:w-auto" />
             </div>
           </div>
         </div>

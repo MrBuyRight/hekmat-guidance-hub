@@ -17,17 +17,28 @@ const MobileMenu = () => {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[300px]">
-        <nav className="flex flex-col space-y-4 mt-8">
-          <a href="#services" className="text-lg font-medium hover:text-wisdom-600 transition-colors">
-            Services
-          </a>
-          <a href="#areas" className="text-lg font-medium hover:text-wisdom-600 transition-colors">
-            Areas of Expertise
-          </a>
-          <a href="#how-it-works" className="text-lg font-medium hover:text-wisdom-600 transition-colors">
-            How It Works
-          </a>
+      <SheetContent side="left" className="w-[300px] p-0">
+        <nav className="flex flex-col h-full bg-background pt-16">
+          <div className="flex flex-col space-y-1">
+            <a 
+              href="#services" 
+              className="px-6 py-3 text-base font-medium hover:bg-accent transition-colors"
+            >
+              Services
+            </a>
+            <a 
+              href="#areas" 
+              className="px-6 py-3 text-base font-medium hover:bg-accent transition-colors"
+            >
+              Areas of Expertise
+            </a>
+            <a 
+              href="#how-it-works" 
+              className="px-6 py-3 text-base font-medium hover:bg-accent transition-colors"
+            >
+              How It Works
+            </a>
+          </div>
         </nav>
       </SheetContent>
     </Sheet>
