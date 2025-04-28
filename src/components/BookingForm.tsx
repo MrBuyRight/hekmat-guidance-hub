@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button, ButtonProps } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Dialog,
   DialogContent,
@@ -24,9 +25,19 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+const guidanceAreas = [
+  { id: "personal", label: "Personal Development" },
+  { id: "career", label: "Career Growth" },
+  { id: "relationships", label: "Relationships" },
+  { id: "mental_health", label: "Mental Health & Wellness" },
+  { id: "life_transition", label: "Life Transitions" },
+  { id: "spiritual", label: "Spiritual Growth" },
+] as const;
+
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   phone: z.string().min(10, "Please enter a valid phone number"),
+  areas: z.array(z.string()).min(1, "Please select at least one area"),
 });
 
 interface BookingFormProps extends Omit<ButtonProps, 'children'> {
@@ -40,6 +51,7 @@ export function BookingForm({ buttonText = "Book Your Call", ...buttonProps }: B
     defaultValues: {
       name: "",
       phone: "",
+      areas: [],
     },
   });
 
@@ -50,6 +62,7 @@ export function BookingForm({ buttonText = "Book Your Call", ...buttonProps }: B
         .insert([{ 
           name: values.name,
           phone: values.phone,
+          areas: values.areas,
         }]);
 
       if (error) throw error;
@@ -114,6 +127,51 @@ export function BookingForm({ buttonText = "Book Your Call", ...buttonProps }: B
                       className="py-6 px-4 border-gray-200 focus:border-wisdom-500 focus:ring-wisdom-500"
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="areas"
+              render={() => (
+                <FormItem>
+                  <FormLabel className="text-gray-700">Areas You Need Guidance In</FormLabel>
+                  <div className="grid grid-cols-1 gap-3 mt-2">
+                    {guidanceAreas.map((area) => (
+                      <FormField
+                        key={area.id}
+                        control={form.control}
+                        name="areas"
+                        render={({ field }) => {
+                          return (
+                            <FormItem
+                              key={area.id}
+                              className="flex flex-row items-start space-x-3 space-y-0"
+                            >
+                              <FormControl>
+                                <Checkbox
+                                  checked={field.value?.includes(area.id)}
+                                  onCheckedChange={(checked) => {
+                                    return checked
+                                      ? field.onChange([...field.value, area.id])
+                                      : field.onChange(
+                                          field.value?.filter(
+                                            (value) => value !== area.id
+                                          )
+                                        )
+                                  }}
+                                />
+                              </FormControl>
+                              <FormLabel className="text-sm font-normal">
+                                {area.label}
+                              </FormLabel>
+                            </FormItem>
+                          )
+                        }}
+                      />
+                    ))}
+                  </div>
                   <FormMessage />
                 </FormItem>
               )}
