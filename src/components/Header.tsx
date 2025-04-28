@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
         <div className="flex items-center gap-4">
           <MobileMenu />
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center">
             <a href="/" className="flex items-center">
               <span className={`text-xl md:text-2xl font-bold tracking-wide font-['Tilt_Prism'] ${
                 isScrolled ? "text-gray-900" : "text-white"
@@ -33,7 +33,7 @@ const Header = () => {
                 hekmat
               </span>
             </a>
-            <span className={`text-[10px] md:text-xs font-serif italic mt-0.5 tracking-wider ${
+            <span className={`text-[10px] md:text-xs font-serif italic mt-0.5 tracking-wider text-center ${
               isScrolled ? "text-gray-600" : "text-zinc-50"
             }`}>
               Farsi - wisdom and guidance
