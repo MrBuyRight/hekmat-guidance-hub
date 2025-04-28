@@ -27,7 +27,7 @@ const Header = () => {
           <MobileMenu />
           <div className="flex flex-col">
             <a href="/" className="flex items-center">
-              <span className={`text-xl md:text-2xl font-bold font-serif tracking-wide ${
+              <span className={`text-xl md:text-2xl font-bold tracking-wide font-['Tilt_Prism'] ${
                 isScrolled ? "text-gray-900" : "text-white"
               }`}>
                 hekmat
