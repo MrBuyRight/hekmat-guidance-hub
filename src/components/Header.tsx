@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { BookingForm } from "@/components/BookingForm";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -41,10 +40,10 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white bg-opacity-95 shadow-md py-2" : "bg-transparent py-3 md:py-5"
+        isScrolled ? "bg-white bg-opacity-95 shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
+      <div className="container mx-auto flex justify-between items-center px-4">
         <div className="flex items-center gap-4">
           <div className="flex flex-col items-center">
             <a href="/" className="flex items-center">
@@ -57,7 +56,7 @@ const Header = () => {
               </span>
             </a>
             <span
-              className={`text-[8px] md:text-xs font-serif italic mt-0.5 tracking-wider text-center ${
+              className={`text-xs font-serif italic mt-0.5 tracking-wider text-center ${
                 isScrolled ? "text-gray-600" : "text-zinc-50"
               }`}
             >
@@ -113,7 +112,7 @@ const Header = () => {
               <div className="flex flex-col h-full">
                 <div className="p-6 border-b">
                   <div className="flex flex-col items-center mb-6">
-                    <span className="text-3xl font-bold tracking-wide font-['Tilt_Prism'] text-gray-900">
+                    <span className="text-4xl font-bold tracking-wide font-['Tilt_Prism'] text-gray-900">
                       hekmat
                     </span>
                     <span className="text-xs font-serif italic mt-0.5 tracking-wider text-center text-gray-600">
