@@ -60,7 +60,7 @@ const Header = () => {
                 isScrolled ? "text-gray-600" : "text-zinc-50"
               }`}
             >
-              - wisdom and guidance
+              - guidance & understanding
             </span>
           </div>
         </div>
@@ -116,7 +116,7 @@ const Header = () => {
                       hekmat
                     </span>
                     <span className="text-xs font-serif italic mt-0.5 tracking-wider text-center text-gray-600">
-                      - wisdom and guidance
+                      - guidance & understanding
                     </span>
                   </div>
                 </div>
