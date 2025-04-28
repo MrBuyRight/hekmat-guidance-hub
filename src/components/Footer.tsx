@@ -1,11 +1,7 @@
-
 import React from "react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+  return <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -16,9 +12,7 @@ const Footer = () => {
                 </span>
               </a>
             </div>
-            <p className="mb-4 max-w-md">
-              Personalized guidance for life's challenges. Connect with experienced guides who can help you navigate difficult decisions and find clarity.
-            </p>
+            <p className="mb-4 max-w-md">Personalized guidance for life's challenges. Connect with guidance who can help you navigate difficult decisions and help find clarity.</p>
           </div>
 
           <div>
@@ -98,8 +92,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
