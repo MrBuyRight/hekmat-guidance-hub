@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import { BookingForm } from "@/components/BookingForm";
 
@@ -54,7 +53,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 reveal">
-              <BookingForm buttonText="Get Help" className="w-full sm:w-auto" />
+              <BookingForm buttonText="Book a Call" className="w-full sm:w-auto" />
             </div>
           </div>
         </div>
