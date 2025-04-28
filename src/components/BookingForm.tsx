@@ -15,7 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button, ButtonProps } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -29,7 +29,11 @@ const formSchema = z.object({
   phone: z.string().min(10, "Please enter a valid phone number"),
 });
 
-export function BookingForm() {
+interface BookingFormProps extends Omit<ButtonProps, 'children'> {
+  buttonText?: string;
+}
+
+export function BookingForm({ buttonText = "Book Your Call", ...buttonProps }: BookingFormProps) {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -68,9 +72,9 @@ export function BookingForm() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-wisdom-600 hover:bg-wisdom-700 text-white px-8 py-6 text-lg">
+        <Button className="bg-wisdom-600 hover:bg-wisdom-700 text-white px-8 py-6 text-lg" {...buttonProps}>
           <CalendarClock className="w-5 h-5 mr-2" />
-          Book Your Call
+          {buttonText}
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] p-6 bg-white rounded-lg shadow-xl border-0">

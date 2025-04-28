@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 import { BookingForm } from "@/components/BookingForm";
 
@@ -40,7 +41,7 @@ const CallToAction = () => {
             Book your free 30-minute guidance call and start your journey towards clarity.
           </p>
           <div className="flex justify-center reveal">
-            <BookingForm />
+            <BookingForm buttonText="Book Your Call" />
           </div>
           <p className="mt-6 text-sm text-hekmat-300 reveal">
             No commitment required. Cancel or reschedule anytime.
