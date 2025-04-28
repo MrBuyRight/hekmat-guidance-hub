@@ -1,10 +1,12 @@
 
 import React, { useEffect, useRef } from "react";
 import { BookingForm } from "@/components/BookingForm";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Hero = () => {
   const observerRef = useRef<null | IntersectionObserver>(null);
   const elementsRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(entries => {
@@ -55,10 +57,10 @@ const Hero = () => {
               Book a 30-minute phone call for personalized guidance. No matter what you're facing, we're here to help.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 reveal">
+            <div className={`flex ${isMobile ? 'flex-col w-full' : 'flex-row'} gap-4 reveal`}>
               <BookingForm 
                 buttonText="Book a Call" 
-                className="w-full sm:w-auto text-white bg-wisdom-700 hover:bg-wisdom-600 sm:text-lg" 
+                className={`${isMobile ? 'w-full' : 'w-auto'} text-white bg-wisdom-700 hover:bg-wisdom-600 sm:text-lg`} 
               />
             </div>
           </div>
