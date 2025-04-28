@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 
 const HowItWorks = () => {
@@ -43,7 +42,7 @@ const HowItWorks = () => {
     {
       number: "03",
       title: "Connect with Your Guide",
-      description: "Join your video call and get personalized guidance tailored to your situation.",
+      description: "Join your phone call and get personalized guidance tailored to your situation.",
     },
     {
       number: "04",

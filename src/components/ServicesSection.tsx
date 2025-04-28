@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, Clock, Calendar } from "lucide-react";
@@ -35,7 +34,7 @@ const ServicesSection = () => {
     {
       icon: <MessageSquare className="h-10 w-10 text-wisdom-600" />,
       title: "1:1 Guidance Sessions",
-      description: "Personalized video calls with experienced guides who provide tailored advice for your specific situation.",
+      description: "Personalized phone calls with experienced guides who provide tailored advice for your specific situation.",
     },
     {
       icon: <Clock className="h-10 w-10 text-hekmat-600" />,
