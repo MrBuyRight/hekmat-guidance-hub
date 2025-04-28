@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { BookingForm } from "@/components/BookingForm";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -60,7 +61,7 @@ const Header = () => {
                 isScrolled ? "text-gray-600" : "text-zinc-50"
               }`}
             >
-              -guidance consultancy
+              -life design, guidance, consultancy
             </span>
           </div>
         </div>
