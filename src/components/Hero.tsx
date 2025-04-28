@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { BookingForm } from "@/components/BookingForm";
 import { useIsMobile } from "@/hooks/use-mobile";
+
 const Hero = () => {
   const observerRef = useRef<null | IntersectionObserver>(null);
   const elementsRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+
   useEffect(() => {
     observerRef.current = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -25,6 +27,7 @@ const Hero = () => {
       }
     };
   }, []);
+
   return <section className="relative pt-20 md:pt-28 pb-16 md:pb-32 min-h-screen md:min-h-[90vh] flex items-center">
       <div className="absolute inset-0 z-0" style={{
       backgroundImage: "url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000&h=800')",
@@ -39,7 +42,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight reveal drop-shadow-lg">
-              Get Guidance for all of Life's{" "}
+              Guidance for all of Life's{" "}
               <span className="text-wisdom-100">Decisions</span>
             </h1>
             
@@ -53,4 +56,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
