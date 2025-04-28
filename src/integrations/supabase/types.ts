@@ -11,6 +11,7 @@ export type Database = {
     Tables: {
       call_bookings: {
         Row: {
+          areas: string[] | null
           created_at: string
           id: string
           name: string
@@ -19,6 +20,7 @@ export type Database = {
           status: string
         }
         Insert: {
+          areas?: string[] | null
           created_at?: string
           id?: string
           name: string
@@ -27,6 +29,7 @@ export type Database = {
           status?: string
         }
         Update: {
+          areas?: string[] | null
           created_at?: string
           id?: string
           name?: string

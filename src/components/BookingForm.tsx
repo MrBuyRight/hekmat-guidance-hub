@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -57,6 +56,8 @@ export function BookingForm({ buttonText = "Book Your Call", ...buttonProps }: B
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      console.log('Submitting form with values:', values); // Debug log
+      
       const { error } = await supabase
         .from('call_bookings')
         .insert([{ 
@@ -65,7 +66,10 @@ export function BookingForm({ buttonText = "Book Your Call", ...buttonProps }: B
           areas: values.areas,
         }]);
 
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase error:', error); // Debug log
+        throw error;
+      }
 
       toast({
         title: "Booking Request Sent!",
@@ -74,6 +78,7 @@ export function BookingForm({ buttonText = "Book Your Call", ...buttonProps }: B
 
       form.reset();
     } catch (error) {
+      console.error('Form submission error:', error); // Debug log
       toast({
         variant: "destructive",
         title: "Error",
