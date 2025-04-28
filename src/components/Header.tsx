@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { BookingForm } from "@/components/BookingForm";
 
@@ -25,7 +26,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <div className="flex flex-col items-center">
             <a href="/" className="flex items-center">
-              <span className={`text-xl md:text-2xl font-bold tracking-wide font-['Tilt_Prism'] ${
+              <span className={`text-2xl md:text-4xl font-bold tracking-wide font-['Tilt_Prism'] ${
                 isScrolled ? "text-gray-900" : "text-white"
               }`}>
                 hekmat
