@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight reveal drop-shadow-lg">
-              Get Guidance for all of Life's{" "}
+              Guidance for all of Life's{" "}
               <span className="text-wisdom-100">Decisions</span>
             </h1>
             
