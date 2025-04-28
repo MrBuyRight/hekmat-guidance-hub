@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/BookingForm";
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -25,9 +24,7 @@ const Header = () => {
               hekmat<span className="font-serif text-white">.help</span>
             </span>
           </a>
-          <span className="text-[10px] md:text-xs font-serif italic mt-1 tracking-wider text-zinc-50">
-            Persian: حکمت - wisdom and guidance
-          </span>
+          <span className="text-[10px] md:text-xs font-serif italic mt-1 tracking-wider text-zinc-50">Farsi - wisdom and guidance</span>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
