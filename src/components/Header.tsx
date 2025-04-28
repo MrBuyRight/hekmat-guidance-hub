@@ -27,6 +27,11 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Force a rerender on mobile detection change
+    console.log("Mobile detected:", isMobile);
+  }, [isMobile]);
+
   const navItems = [
     { href: "#services", text: "Services" },
     { href: "#areas", text: "Areas of Expertise" },
@@ -36,7 +41,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white bg-opacity-95 shadow-md py-3" : "bg-transparent py-5"
+        isScrolled ? "bg-white bg-opacity-95 shadow-md py-2" : "bg-transparent py-3 md:py-5"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
@@ -44,7 +49,7 @@ const Header = () => {
           <div className="flex flex-col items-center">
             <a href="/" className="flex items-center">
               <span
-                className={`text-2xl md:text-4xl font-bold tracking-wide font-['Tilt_Prism'] ${
+                className={`text-xl md:text-4xl font-bold tracking-wide font-['Tilt_Prism'] ${
                   isScrolled ? "text-gray-900" : "text-white"
                 }`}
               >
@@ -52,7 +57,7 @@ const Header = () => {
               </span>
             </a>
             <span
-              className={`text-[10px] md:text-xs font-serif italic mt-0.5 tracking-wider text-center ${
+              className={`text-[8px] md:text-xs font-serif italic mt-0.5 tracking-wider text-center ${
                 isScrolled ? "text-gray-600" : "text-zinc-50"
               }`}
             >
@@ -89,19 +94,19 @@ const Header = () => {
             buttonText="Get Help"
             variant="outline"
             size="sm"
-            className="!bg-wisdom-600 !text-white hover:!bg-wisdom-700 !px-3"
+            className="!bg-wisdom-600 !text-white hover:!bg-wisdom-700 !px-3 !py-1.5 text-sm"
           />
 
           <Sheet>
             <SheetTrigger asChild>
               <button
-                className={`p-2 rounded-md ${
+                className={`p-1.5 rounded-md ${
                   isScrolled
                     ? "bg-wisdom-600 text-white"
                     : "bg-white/20 text-white backdrop-blur-sm"
                 }`}
               >
-                <Menu size={20} />
+                <Menu size={18} />
               </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[80vw] bg-white p-0">
