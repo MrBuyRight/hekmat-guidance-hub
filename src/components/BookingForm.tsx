@@ -26,12 +26,12 @@ import {
 } from "@/components/ui/dialog";
 
 const guidanceAreas = [
-  { id: "personal", label: "Personal Development" },
-  { id: "career", label: "Career Growth" },
+  { id: "financial", label: "Financial Decision Making" },
+  { id: "mental_health", label: "Mental Health & Wellbeing" },
+  { id: "business", label: "Business & Career" },
   { id: "relationships", label: "Relationships" },
-  { id: "mental_health", label: "Mental Health & Wellness" },
+  { id: "self_development", label: "Self-Development" },
   { id: "life_transition", label: "Life Transitions" },
-  { id: "spiritual", label: "Spiritual Growth" },
 ] as const;
 
 const formSchema = z.object({
