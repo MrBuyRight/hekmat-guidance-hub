@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 import { BookingForm } from "@/components/BookingForm";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -28,6 +29,11 @@ const Hero = () => {
     };
   }, []);
 
+  // Determine layout based on mobile state, with a fallback to ensure rendering
+  const buttonWrapperClasses = typeof isMobile !== 'undefined' 
+    ? `flex ${isMobile ? 'flex-col w-full' : 'flex-row'} gap-4 reveal`
+    : 'flex flex-col sm:flex-row gap-4 reveal'; // Fallback layout that works on both mobile and desktop
+
   return <section className="relative pt-20 md:pt-28 pb-16 md:pb-32 min-h-screen md:min-h-[90vh] flex items-center">
       <div className="absolute inset-0 z-0" style={{
       backgroundImage: "url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000&h=800')",
@@ -48,8 +54,11 @@ const Hero = () => {
             
             <p className="text-base md:text-xl text-gray-50 mb-6 md:mb-8 leading-relaxed reveal drop-shadow max-w-xl">Book a 30-minute phone call for personalized guidance. No matter what you're facing or pursuing, we're here to help.</p>
             
-            <div className={`flex ${isMobile ? 'flex-col w-full' : 'flex-row'} gap-4 reveal`}>
-              <BookingForm buttonText="Book a Call" className={`${isMobile ? 'w-full' : 'w-auto'} text-white bg-wisdom-700 hover:bg-wisdom-600 sm:text-lg`} />
+            <div className={buttonWrapperClasses}>
+              <BookingForm 
+                buttonText="Book a Call" 
+                className={`${typeof isMobile !== 'undefined' && isMobile ? 'w-full' : 'w-auto'} text-white bg-wisdom-700 hover:bg-wisdom-600 sm:text-lg`} 
+              />
             </div>
           </div>
         </div>
