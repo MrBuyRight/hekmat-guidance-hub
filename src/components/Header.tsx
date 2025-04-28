@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BookingForm } from "@/components/BookingForm";
-import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +23,6 @@ const Header = () => {
     }`}>
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
         <div className="flex items-center gap-4">
-          <MobileMenu />
           <div className="flex flex-col items-center">
             <a href="/" className="flex items-center">
               <span className={`text-xl md:text-2xl font-bold tracking-wide font-['Tilt_Prism'] ${
